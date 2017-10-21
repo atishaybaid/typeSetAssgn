@@ -4,53 +4,12 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="./emojify.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
 </head>
 <body>
     Enter Message <input type="text" name="" placeholder="Enter your message" id="msg-field">
-    <ul class="messagelist"></ul>
-
-<script type="text/javascript">
-    (function(){
-        function attachEventListener(){
-            document.getElementById('msg-field').addEventListener("keydown",handleKeydown);
-        }
-        function handleKeydown(event){
-            var value = event.target.value;
-            if(event.keyCode === 13){
-               displayMsg(value);
-               event.target.value='';
-            }
-
-        }
-
-        function displayMsg(value){
-            
-            var ele = document.createElement('li');
-            var msg = processMsg(value);
-            var eleHtml = '<span class="msg">' +msg+ '<span>'
-             
-            ele.innerHTML = eleHtml;
-
-            document.getElementsByClassName('messagelist')[0].append(ele);
-            
-        }
-
-        function processMsg(value){
-            //smile replace
-            var smileImg = '<img src="./smiling_face.png" class="inline-emoji"/>';
-            var heartImg = '<img src="./pink_heart.png" class="inline-emoji"/>'
-            var msg =   value.replace(/:\)/g,smileImg).replace(/<3/g,heartImg);
-            return msg;
-          //console.log(mStr);
-
-        }   
-        
-        function init(){
-            attachEventListener();
-        }
-
-        init();
-    }())
+    <ul class="messagelist"></ul>   
 
 </script>
 
