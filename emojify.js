@@ -5,8 +5,9 @@ emojify.list = [
         imgPath:'./smiling_face.png'
     },
     {
-        symbol:/<3/g,
+        symbol:/&lt;3/g,
         imgPath:'./pink_heart.png'
+
     }
 ];
 emojify.add = function (symbolRegex,imgPath){

@@ -2,3 +2,9 @@
     width: 15px;
     height: 15px;
 }
+
+
+#nmsg-field{
+    border: 1px solid;
+    width: 350px;
+}
